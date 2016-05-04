@@ -1,0 +1,9 @@
+package Classes;
+
+public class Parent {
+	
+	private String relationship;
+	private Child [] childrem ;
+	
+
+}

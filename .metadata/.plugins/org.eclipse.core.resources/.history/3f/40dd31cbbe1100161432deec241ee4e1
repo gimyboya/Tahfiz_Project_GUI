@@ -1,0 +1,14 @@
+package Classes;
+
+public class Child {
+	
+	private long student_ID;
+	private String name ;
+	private Parent first_parent ;
+	private Parent second_parent ;
+	private String [] alternative_parents;
+	//image
+	private String Phone ;
+	private float amount_of_hifz;
+
+}
