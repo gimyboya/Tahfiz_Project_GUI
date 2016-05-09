@@ -3,7 +3,7 @@ package Classes;
 import java.util.Date;
 
 public class Account {
-	private long ID ;
+	protected long ID ;// Admin ID must start with '2' for teacher or '3' for parent , and consist of 9 digits
 	private String pass; 
 	private String name ;
 	private String phone ;
@@ -26,9 +26,8 @@ public class Account {
 	}
 	
 	
-	public Account(long iD, String pass, String name, String phone, String e_mail, Date dOB, String address,
+	public Account(String pass, String name, String phone, String e_mail, Date dOB, String address,
 			char gender) {
-		ID = iD;
 		this.pass = pass;
 		this.name = name;
 		this.phone = phone;
@@ -39,12 +38,9 @@ public class Account {
 	}
 
 
-	public long getID() {
-		return ID;
-	}
 	
-	public void setID(long iD) {
-		ID = iD;
+	
+	protected void setID(long iD) {
 	}
 	public String getPass() {
 		return pass;

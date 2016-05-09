@@ -2,15 +2,14 @@ package Classes;
 
 public class Child {
 	
-	private long student_ID;
+	private long student_ID; //student ID must start with '4' and consist of 9 digits
 	private String name ;
 	private int age ;
 	private Parent first_parent ;
 	private Parent second_parent ;
-	private String [] alternative_parents;
-	//image
+	private String [] alternative_parents; //array of alternative parents' names in case that the main parents are not available 
 	private String phone ;
-	private float amount_of_hifz;
+	private float amount_of_hifz; //the totsl amount of memorization which counted with pages 
 	
 	public Child(){
 		student_ID = 0;
@@ -20,30 +19,30 @@ public class Child {
 		second_parent = null;
 		alternative_parents = null;
 		phone = null;
-		amount_of_hifz = 0;
+		amount_of_hifz = 0; 
 		//prombt "you have create an empty Child"
 	}
 	
-	public Child(long student_ID, String name, int age, Parent first_parent, Parent second_parent,
-			String[] alternative_parents, String phone, float amount_of_hifz) {
+	public Child(long student_ID, String name, int age, String[] alternative_parents, String phone, float amount_of_hifz) {
 		
-		this.student_ID = student_ID;
+		if(student_ID%100000000==4)this.student_ID = student_ID;
 		this.name = name;
 		this.age = age;
-		this.first_parent = first_parent;
-		this.second_parent = second_parent;
 		this.alternative_parents = alternative_parents;
 		this.phone = phone;
 		this.amount_of_hifz = amount_of_hifz;
 		//prombt "you have create a (child's name ) child"
+		
 	}
+	
+	// get/set methods
 
 	public long getStudent_ID() {
 		return student_ID;
 	}
 
 	public void setStudent_ID(long student_ID) {
-		this.student_ID = student_ID;
+		if(student_ID%100000000==4)this.student_ID = student_ID;
 	}
 
 	public String getName() {
@@ -100,6 +99,17 @@ public class Child {
 
 	public void setAmount_of_hifz(float amount_of_hifz) {
 		this.amount_of_hifz = amount_of_hifz;
+	}
+	
+	//other methods 
+	
+	void add_pages(float pages){
+		//Round the pages to just one or half page
+		//need to complete 
+	}
+	//overloading 
+	void add_pages(int pages){
+		amount_of_hifz+=pages;
 	}
 	
 	
