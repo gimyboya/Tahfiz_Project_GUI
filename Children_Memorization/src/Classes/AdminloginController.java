@@ -14,6 +14,6 @@ public class AdminloginController {
     public void goBack () {
 
         Stage stage = (Stage) goBack.getScene().getWindow();
-        stage.hide();
+        stage.close();
     }
 }
