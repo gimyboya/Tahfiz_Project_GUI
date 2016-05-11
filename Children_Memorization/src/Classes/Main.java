@@ -1,19 +1,26 @@
-package Classes;
+package Classes;/**
+ * Created by gimy on 11/05/2016.
+ */
 
+import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
 
-public class Main {
-	
-	//put the interfaces here 
-	
-	
-	
-	/* assign the DOB 
-	  import java.util.Calendar;
-	 
-    Calendar cal = Calendar.getInstance();
-    cal.set(1985, 8, 1); // Assumes dd/MM/yyyy
-    // cal.getTime() returns a Date object
-    user.setDOB(cal.getTime()); 
-    */
+public class Main extends Application {
+
+    public static void main(String[] args) {
+        launch(args);
+    }
+
+    @Override
+    public void start(Stage primaryStage) throws Exception{
+        Parent root = FXMLLoader.load(getClass().getResource("Welcome.fxml"));
+        primaryStage.setTitle("Welcome");
+        primaryStage.setScene(new Scene(root, 650, 300));
+        primaryStage.show();
+    }
+
 
 }
