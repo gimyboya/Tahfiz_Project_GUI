@@ -19,11 +19,11 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        ArrayList<Admin> admin = new ArrayList<>();
-        ArrayList<Section> section = new ArrayList<>();
-        ArrayList<Teacher> teacher = new ArrayList<>();
-        ArrayList<Parent> parent = new ArrayList<>();
-        ArrayList<Child> child = new ArrayList<>();
+        ArrayList<Admin> admins = new ArrayList<>();
+        ArrayList<Section> sections = new ArrayList<>();
+        ArrayList<Teacher> teachers = new ArrayList<>();
+        ArrayList<Parent> parents = new ArrayList<>();
+        ArrayList<Child> children = new ArrayList<>();
         ArrayList<Memorazation> memo = new ArrayList<>();
 
         Parent root = FXMLLoader.load(getClass().getResource("Welcome.fxml"));
