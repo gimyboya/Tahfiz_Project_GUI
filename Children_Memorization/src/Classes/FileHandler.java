@@ -11,15 +11,26 @@ import java.util.*;
 public class FileHandler {
 
     private Formatter pen;
-    private Scanner file;
+    private Scanner scanner;
+    private File file;
 
     public void openAdminFile (){ // to open a file for reading
         try{
-            file = new Scanner(new File("Admin.records"));
-        }
-        catch (Exception e){
+            file = new File("Admin.txt");
 
-            OkAlert.display("Missing File", "The File you are trying to open doesn't exist and have been created");
+            if (file.createNewFile()){
+                System.out.println("File is created!");
+                OkAlert.display("Missing File", "The File you are trying to open doesn't exist but have been created");
+            }else{
+                System.out.println("Admin file already exists.");
+            }
+
+            scanner = new Scanner(file);
+        }
+        catch (IOException e){
+
+
+
 
         }
     }
@@ -27,7 +38,7 @@ public class FileHandler {
     public void openAdminFormatter (){ // to open a file for writing
 
         try{
-            pen = new Formatter(new BufferedWriter(new FileWriter("Admins.records", true)));
+            pen = new Formatter(new BufferedWriter(new FileWriter("Admins.txt", true)));
         }
         catch (Exception e){
 
@@ -37,7 +48,8 @@ public class FileHandler {
 
     public void openSectionFile (){
         try{
-            file = new Scanner(new File("Sections.records"));
+            file = new File("Sections.txt");
+            scanner = new Scanner(file);
         }
         catch (Exception e){
 
@@ -49,7 +61,7 @@ public class FileHandler {
     public void openSectionFormatter (){
 
         try{
-            pen = new Formatter(new BufferedWriter(new FileWriter("Sections.records", true)));
+            pen = new Formatter(new BufferedWriter(new FileWriter("Sections.txt", true)));
         }
         catch (Exception e){
 
@@ -59,7 +71,8 @@ public class FileHandler {
 
     public void openTeacherFile (){
         try{
-            file = new Scanner(new File("Teachers.records"));
+            file = new File("Teachers.txt");
+            scanner = new Scanner(file);
         }
         catch (Exception e){
 
@@ -71,7 +84,7 @@ public class FileHandler {
     public void openTeacherFormatter (){
 
         try{
-            pen = new Formatter(new BufferedWriter(new FileWriter("Teachers.records", true)));
+            pen = new Formatter(new BufferedWriter(new FileWriter("Teachers.txt", true)));
         }
         catch (Exception e){
 
@@ -81,7 +94,8 @@ public class FileHandler {
 
     public void openParentFile (){
         try{
-            file = new Scanner(new File("Parents.records"));
+            file = new File("Parents.txt");
+            scanner = new Scanner(file);
         }
         catch (Exception e){
 
@@ -93,7 +107,7 @@ public class FileHandler {
     public void openParentFormatter (){
 
         try{
-            pen = new Formatter(new BufferedWriter(new FileWriter("Parents.records", true)));
+            pen = new Formatter(new BufferedWriter(new FileWriter("Parents.txt", true)));
         }
         catch (Exception e){
 
@@ -103,7 +117,8 @@ public class FileHandler {
 
     public void openChildrenFile (){
         try{
-            file = new Scanner(new File("Children.records"));
+            file = new File("Children.txt");
+            scanner = new Scanner(file);
         }
         catch (Exception e){
 
@@ -115,7 +130,7 @@ public class FileHandler {
     public void openChildrenFormatter (){
 
         try{
-            pen = new Formatter(new BufferedWriter(new FileWriter("Children.records", true)));
+            pen = new Formatter(new BufferedWriter(new FileWriter("Children.txt", true)));
         }
         catch (Exception e){
 
@@ -125,7 +140,8 @@ public class FileHandler {
 
     public void openMemorizationFile (){
         try{
-            file = new Scanner(new File("Memorization.records"));
+            file = new File("Memorization.txt");
+            scanner = new Scanner(file);
         }
         catch (Exception e){
 
@@ -137,7 +153,7 @@ public class FileHandler {
     public void openMemorizationFormatter (){
 
         try{
-            pen = new Formatter(new BufferedWriter(new FileWriter("Memorization.records", true)));
+            pen = new Formatter(new BufferedWriter(new FileWriter("Memorization.txt", true)));
         }
         catch (Exception e){
 
@@ -150,10 +166,10 @@ public class FileHandler {
     public void readAdmin (ArrayList<Admin> admins){
 
         int counter = 0;
-        while(file.hasNext()){
-            admins.get(counter).setAdmin_ID(file.nextInt());
-            admins.get(counter).setName(file.next());
-            admins.get(counter).setPass(file.next());
+        while(scanner.hasNext()){
+            admins.get(counter).setAdmin_ID(scanner.nextInt());
+            admins.get(counter).setName(scanner.next());
+            admins.get(counter).setPass(scanner.next());
             counter++;
         }
 
@@ -195,7 +211,7 @@ public class FileHandler {
     }
 
     public void closeFile (){
-        file.close();
+        scanner.close();
     }
 
 
