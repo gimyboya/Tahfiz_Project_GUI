@@ -31,7 +31,7 @@ public class AdminloginController {
     public void login(ActionEvent actionEvent) {
         Validator validator = new Validator();
 
-        validator.AdminID(adminID,adminID.getText());
+        validator.AdminID(adminID,adminID.getText(), Arrays.globaladmins);
         validator.adminpass(pass,pass.getPromptText(),Arrays.globaladmins);
     }
 }

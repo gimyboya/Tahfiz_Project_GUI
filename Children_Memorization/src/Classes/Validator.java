@@ -11,20 +11,22 @@ public class Validator {
 
     public boolean AdminID (TextField field, String id, ArrayList<Admin> admins) {
 
+        field.setStyle("-fx-control-inner-background: #FFFFFF");
+        boolean result = false;
+
         if (id.matches("[1]\\d{4}")) {
 
             for (int i = 0; i < admins.size(); i++) {
-                if (id.matches(admins.get(i).getAdmin_ID())) {
-                    return true;
-                    break;
-                } else {
-                    field.setStyle("-fx-control-inner-background: #FA5064");
-                    return false;
+                if (id.equals(admins.get(i).getAdmin_ID())) {
+                    System.out.println("True");
+                    result = true;
                 }
             }
-
+            System.out.println(result);
+            return result;
         } else {
             field.setStyle("-fx-control-inner-background: #FA5064");
+            System.out.println("False");
             return false;
         }
 
@@ -60,7 +62,7 @@ public class Validator {
         
         for(int i = 0; i < admins.size(); i++){
 
-            if(pass.matches(admins.get(i).getPass())){
+            if(pass.equals(admins.get(i).getPass())){
                 result = true;
                 break;
             }
