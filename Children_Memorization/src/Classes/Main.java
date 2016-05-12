@@ -20,6 +20,7 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception{
 
+        Stages.Window = primaryStage;
 
         FileHandler fileHandler = new FileHandler();
 

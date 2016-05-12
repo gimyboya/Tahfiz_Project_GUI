@@ -14,9 +14,9 @@ import java.util.ResourceBundle;
 
 public class WelcomeController implements Initializable {
 
-    public static Stage adminStage = new Stage();
-    public static Stage teacherStage = new Stage();
-    public static Stage parentStage = new Stage();
+    public static Stage adminloginStage = new Stage();
+    public static Stage teacherloginStage = new Stage();
+    public static Stage parentloginStage = new Stage();
 
     public Hyperlink adminLink;
     public Button tBut;
@@ -30,32 +30,35 @@ public class WelcomeController implements Initializable {
 
     public void adminLinkClicked () throws IOException {
 
-        adminStage.initModality(Modality.APPLICATION_MODAL);
+        //adminloginStage.initModality(Modality.APPLICATION_MODAL);
 
         javafx.scene.Parent root = FXMLLoader.load(getClass().getResource("Adminlogin.fxml"));
-        adminStage.setTitle("Admin Login");
-        adminStage.setScene(new Scene(root, 350, 200));
-        adminStage.showAndWait();
+        adminloginStage.setTitle("Admin Login");
+        adminloginStage.setScene(new Scene(root, 350, 200));
+        adminloginStage.showAndWait();
+
+
+
     }
 
 
     public void tLogButClicked () throws IOException {
 
-        teacherStage.initModality(Modality.APPLICATION_MODAL);
+        //teacherloginStage.initModality(Modality.APPLICATION_MODAL);
 
         javafx.scene.Parent root = FXMLLoader.load(getClass().getResource("Teacherlogin.fxml"));
-        teacherStage.setTitle("Teacher Login");
-        teacherStage.setScene(new Scene(root, 350, 200));
-        teacherStage.showAndWait();
+        teacherloginStage.setTitle("Teacher Login");
+        teacherloginStage.setScene(new Scene(root, 350, 200));
+        teacherloginStage.showAndWait();
     }
 
     public void pLogButClicked () throws IOException {
 
-        parentStage.initModality(Modality.APPLICATION_MODAL);
+        //parentloginStage.initModality(Modality.APPLICATION_MODAL);
 
         javafx.scene.Parent root = FXMLLoader.load(getClass().getResource("Parentlogin.fxml"));
-        parentStage.setTitle("Parent Login");
-        parentStage.setScene(new Scene(root, 350, 200));
-        parentStage.showAndWait();
+        parentloginStage.setTitle("Parent Login");
+        parentloginStage.setScene(new Scene(root, 350, 200));
+        parentloginStage.showAndWait();
     }
 }
