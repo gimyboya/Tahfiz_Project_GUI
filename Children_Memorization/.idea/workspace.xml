@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="67420d74-8dc4-4d0b-a9d6-8d28d13c3dda" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dictionaries/gimy.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Classes/FileHandler.java" afterPath="$PROJECT_DIR$/src/Classes/FileHandler.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Classes/Main.java" afterPath="$PROJECT_DIR$/src/Classes/Main.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Classes/OkAlert.java" afterPath="$PROJECT_DIR$/src/Classes/OkAlert.java" />
     </list>
     <ignored path="Children_Memorization.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -30,8 +32,8 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Classes/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="26" column="36" selection-start-line="26" selection-start-column="36" selection-end-line="26" selection-end-column="36" />
+            <state relative-caret-position="305">
+              <caret line="33" column="32" selection-start-line="33" selection-start-column="32" selection-end-line="33" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -116,8 +118,8 @@
       <file leaf-file-name="FileHandler.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Classes/FileHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="156" column="22" selection-start-line="156" selection-start-column="22" selection-end-line="156" selection-end-column="22" />
+            <state relative-caret-position="339">
+              <caret line="167" column="15" selection-start-line="167" selection-start-column="15" selection-end-line="167" selection-end-column="15" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -221,7 +223,6 @@
         <option value="$PROJECT_DIR$/src/Classes/WelcomeController.java" />
         <option value="$PROJECT_DIR$/src/Classes/TeacherloginController.java" />
         <option value="$PROJECT_DIR$/src/Classes/ParentloginController.java" />
-        <option value="$PROJECT_DIR$/src/Classes/OkAlert.java" />
         <option value="$PROJECT_DIR$/src/Classes/Memorazation.java" />
         <option value="$PROJECT_DIR$/src/Classes/AdminloginController.java" />
         <option value="$PROJECT_DIR$/src/Classes/AdminpanelController.java" />
@@ -232,8 +233,9 @@
         <option value="$PROJECT_DIR$/src/Classes/Section.java" />
         <option value="$PROJECT_DIR$/Section.sec" />
         <option value="$PROJECT_DIR$/src/Classes/Admin.java" />
-        <option value="$PROJECT_DIR$/src/Classes/Main.java" />
+        <option value="$PROJECT_DIR$/src/Classes/OkAlert.java" />
         <option value="$PROJECT_DIR$/src/Classes/FileHandler.java" />
+        <option value="$PROJECT_DIR$/src/Classes/Main.java" />
       </list>
     </option>
   </component>
@@ -797,12 +799,10 @@
       <updated>1462920741162</updated>
       <workItem from="1462920755050" duration="8897000" />
       <workItem from="1462943607016" duration="20569000" />
-      <workItem from="1463006002523" duration="9798000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39264000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -1112,16 +1112,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Classes/OkAlert.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-42">
-          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Classes/AdminpanelController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -1295,10 +1285,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Classes/OkAlert.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="305">
+          <caret line="28" column="33" selection-start-line="28" selection-start-column="33" selection-end-line="28" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Classes/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="26" column="36" selection-start-line="26" selection-start-column="36" selection-end-line="26" selection-end-column="36" />
+        <state relative-caret-position="305">
+          <caret line="33" column="32" selection-start-line="33" selection-start-column="32" selection-end-line="33" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1307,8 +1307,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Classes/FileHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="156" column="22" selection-start-line="156" selection-start-column="22" selection-end-line="156" selection-end-column="22" />
+        <state relative-caret-position="339">
+          <caret line="167" column="15" selection-start-line="167" selection-start-column="15" selection-end-line="167" selection-end-column="15" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

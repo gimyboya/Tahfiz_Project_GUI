@@ -149,8 +149,8 @@ public class FileHandler {
 
     public void readAdmin (ArrayList<Admin> admins){
 
+        int counter = 0;
         while(file.hasNext()){
-            int counter = 0;
             admins.get(counter).setAdmin_ID(file.nextInt());
             admins.get(counter).setName(file.next());
             admins.get(counter).setPass(file.next());
@@ -159,6 +159,20 @@ public class FileHandler {
 
     }
 
+    public void addAdmin (Admin admin) throws NullPointerException{
+
+        pen.format("%d %s %s\n", admin.getAdmin_ID(), admin.getName(), admin.getPass());
+
+    }
+
+    //@Overload
+    public void addAdmin (ArrayList<Admin> admin) throws NullPointerException{
+
+        for (int i = 0; i < admin.size() ; i++) {
+            pen.format("%d %s %s\n", admin.get(i).getAdmin_ID(), admin.get(i).getName(), admin.get(i).getPass());
+        }
+
+    }
 
 
     public void addSection (Section section) throws NullPointerException{

@@ -19,6 +19,7 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
+    // Array list declaration all the manipulations will be don temporally here
         ArrayList<Admin> admins = new ArrayList<>();
         ArrayList<Section> sections = new ArrayList<>();
         ArrayList<Teacher> teachers = new ArrayList<>();
@@ -26,11 +27,18 @@ public class Main extends Application {
         ArrayList<Child> children = new ArrayList<>();
         ArrayList<Memorazation> memo = new ArrayList<>();
 
+        FileHandler fileHandler = new FileHandler();
+
+        fileHandler.openAdminFile();
+        fileHandler.readAdmin(admins);
+        fileHandler.closeFile();
+
         Parent root = FXMLLoader.load(getClass().getResource("Welcome.fxml"));
         primaryStage.setTitle("Welcome");
         primaryStage.setScene(new Scene(root, 650, 300));
-
         primaryStage.show();
+
+
     }
 
 

@@ -19,14 +19,14 @@ public class OkAlert {
         //Block events to other windows
         Alert.initModality(Modality.APPLICATION_MODAL);
         Alert.setTitle(title);
-        Alert.setMinWidth(250);
+        Alert.setMinWidth(300);
 
         Label label = new Label();
         label.setText(message);
         Button closeButton = new Button("OK");
         closeButton.setOnAction(e -> Alert.close());
 
-        VBox layout = new VBox(10);
+        VBox layout = new VBox(20);
         layout.getChildren().addAll(label, closeButton);
         layout.setAlignment(Pos.CENTER);
 
