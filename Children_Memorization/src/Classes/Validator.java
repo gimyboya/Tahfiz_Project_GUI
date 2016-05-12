@@ -37,7 +37,7 @@ public class Validator {
         field.setStyle("-fx-control-inner-background: #FFFFFF");
         boolean result = false;
 
-        if (id.matches("[1]\\d{4}")) {
+        if (id.matches("[2]\\d{4}")) {
 
             for (int i = 0; i < teachers.size(); i++) {
                 if (id.equals(teachers.get(i).getID())) {
@@ -57,7 +57,7 @@ public class Validator {
         field.setStyle("-fx-control-inner-background: #FFFFFF");
         boolean result = false;
 
-        if (id.matches("[1]\\d{4}")) {
+        if (id.matches("[3]\\d{4}")) {
 
             for (int i = 0; i < parents.size(); i++) {
                 if (id.equals(parents.get(i).getID())) {
@@ -108,7 +108,7 @@ public class Validator {
     }
 
 
-    public boolean Parentpass (PasswordField field, String pass, ArrayList<Parent> parents, int index){
+    public boolean parentpass (PasswordField field, String pass, ArrayList<Parent> parents, int index){
 
         field.setStyle("-fx-control-inner-background: #FFFFFF");
         boolean result = false;

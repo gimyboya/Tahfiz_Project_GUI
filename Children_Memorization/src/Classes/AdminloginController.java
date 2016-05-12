@@ -44,7 +44,7 @@ public class AdminloginController {
 
             try{
                 javafx.scene.Parent root = FXMLLoader.load(getClass().getResource("Adminpanel.fxml"));
-                Stages.Window.setTitle("Admin Login");
+                Stages.Window.setTitle("Dashboard");
                 Stages.Window.setScene(new Scene(root, 350, 200));
                 Stages.Window.show();
             }catch (IOException e){

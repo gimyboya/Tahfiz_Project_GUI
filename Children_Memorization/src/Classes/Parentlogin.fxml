@@ -13,9 +13,9 @@
    <children>
       <VBox alignment="CENTER_RIGHT" layoutX="103.0" prefHeight="200.0" prefWidth="238.0" spacing="10.0" AnchorPane.leftAnchor="103.0">
          <children>
-            <TextField promptText="ID Number" />
-            <PasswordField promptText="Password" />
-            <Button mnemonicParsing="false" text="Login" />
+            <TextField fx:id="parentID" promptText="ID Number" />
+            <PasswordField fx:id="pass" promptText="Password" />
+            <Button fx:id="login" mnemonicParsing="false" onAction="#login" text="Login" />
             <Hyperlink fx:id="goBackP" onAction="#goBack" text="Go Back" />
          </children>
          <padding>
