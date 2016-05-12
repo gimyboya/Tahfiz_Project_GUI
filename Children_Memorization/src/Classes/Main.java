@@ -33,10 +33,23 @@ public class Main extends Application {
         fileHandler.readAdmin(admins);
         fileHandler.closeFile();
 
+
+
         Parent root = FXMLLoader.load(getClass().getResource("Welcome.fxml"));
         primaryStage.setTitle("Welcome");
         primaryStage.setScene(new Scene(root, 650, 300));
         primaryStage.show();
+
+        int size = admins.size();
+        System.out.println("the size is " + size);
+
+        for(int i = 0; i < admins.size(); i++){
+
+            int id = admins.get(i).getAdmin_ID();
+            String name = admins.get(i).getName();
+            String pass = admins.get(i).getPass();
+            System.out.println( id + " " + name + " " + pass );
+        }
 
 
     }

@@ -1,14 +1,14 @@
 package Classes;
 
 public class Admin {
-	
-	private String name ;
-	private int admin_ID ;// Admin ID must start with '1' and consist of 5 digits
+
+    private int admin_ID ;// Admin ID must start with '1' and consist of 5 digits
+    private String name ;
 	private String pass ;
 	
-	//no default constructor for security purpose 
+	//no default constructor for security purpose
 	
-	public Admin(String name, int admin_ID, String pass) {
+	public Admin(int admin_ID, String name, String pass) {
 		super();
 		this.name = name;
 		if(admin_ID%10000==1){

@@ -167,9 +167,17 @@ public class FileHandler {
 
         int counter = 0;
         while(scanner.hasNext()){
-            admins.get(counter).setAdmin_ID(scanner.nextInt());
-            admins.get(counter).setName(scanner.next());
-            admins.get(counter).setPass(scanner.next());
+
+            try{
+                Admin temp = new Admin(Integer.parseInt(scanner.next()), scanner.next(),scanner.next());
+                admins.add(temp);
+
+
+            }
+            catch (IndexOutOfBoundsException e){
+
+            }
+            System.out.println("Iteration " + counter);
             counter++;
         }
 
