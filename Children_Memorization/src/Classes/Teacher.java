@@ -12,9 +12,16 @@ public class Teacher extends Account{
 		ijaza= false ;
 		classes_in_charge = null ;
 	}
-	public Teacher(int iD, String pass, String name, String phone, String e_mail, String address,boolean ijaza) {
+	public Teacher(String iD, String pass, String name, String phone, String e_mail, String address,boolean ijaza) {
 		super(pass, name, phone, e_mail, address);
-		if(iD % 10000 == 2)this.ID = iD;
+		if(checkTeacherID(ID)){
+			this.ID = ID;
+		}
+		else {
+			OkAlert.display("Error", "Teacher account can't be created check ID");
+			throw new IllegalArgumentException();
+
+		}
 		this.ijaza = ijaza;
 		
 	}
@@ -34,8 +41,18 @@ public class Teacher extends Account{
 	
 	//overriding
 	public void setID(int iD) {
-		if(iD % 10000 == 2)super.ID = iD;
+		if(checkTeacherID(ID)){
+			super.ID = ID;
 		}
-	
-	
+		else {
+			OkAlert.display("Error", "Wrong ID, ID should start with 3");
+			throw new IllegalArgumentException();
+
+		}
+	}
+
+	public boolean checkTeacherID (String id){
+
+		return id.matches("[2]\\d{4}");
+	}
 }

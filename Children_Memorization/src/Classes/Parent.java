@@ -11,9 +11,16 @@ public class Parent extends Account{
 		relationship = null ;
 		his_children = null ;
 	}
-	public Parent(int iD, String pass, String name, String phone, String e_mail, String address,String ralationship) {
+	public Parent(String ID, String pass, String name, String phone, String e_mail, String address,String ralationship) {
 		super(pass, name, phone, e_mail, address);
-		if(iD % 10000 == 3)super.ID = iD;
+		if(checkParentID(ID)){
+			this.ID = ID;
+		}
+		else {
+			OkAlert.display("Error", "Parent account can't be created check ID");
+			throw new IllegalArgumentException();
+
+		}
 		this.relationship = ralationship;
 		
 	}
@@ -32,9 +39,21 @@ public class Parent extends Account{
 	}
 	
 	//overriding 
-	public void setID(int iD) {
-		if(iD % 10000 == 3)super.ID = iD;
+	public void setID(String iD) {
+        if(checkParentID(ID)){
+            super.ID = ID;
+        }
+        else {
+            OkAlert.display("Error", "Wrong ID, ID should start with 3");
+            throw new IllegalArgumentException();
+
+        }
 		
-		}
+	}
+
+	public boolean checkParentID (String id){
+
+		return id.matches("[3]\\d{4}");
+	}
 
 }

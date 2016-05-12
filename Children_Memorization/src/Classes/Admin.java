@@ -36,7 +36,14 @@ public class Admin {
 	}
 
 	public void setAdmin_ID(String admin_ID) {
-		this.admin_ID = admin_ID;
+        if(checkAdminID(admin_ID)){
+            this.admin_ID = admin_ID;
+        }
+        else {
+            OkAlert.display("Error", "wrong ID, ID should start with 1");
+            throw new IllegalArgumentException();
+
+        }
 	}
 
 	public String getPass() {

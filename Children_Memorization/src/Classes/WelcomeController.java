@@ -19,8 +19,8 @@ public class WelcomeController implements Initializable {
     public static Stage parentStage = new Stage();
 
     public Hyperlink adminLink;
-    public Button tLogBut;
-    public Button pLogBut;
+    public Button tBut;
+    public Button pBut;
 
 
     @Override

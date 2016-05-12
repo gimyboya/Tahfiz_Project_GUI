@@ -22,8 +22,7 @@ public class Account {
 	}
 	
 	
-	public Account(String ID, String pass, String name, String phone, String e_mail, String address) {
-		this.ID = ID;
+	public Account( String pass, String name, String phone, String e_mail, String address) {
 		this.pass = pass;
 		this.name = name;
 		this.phone = phone;
