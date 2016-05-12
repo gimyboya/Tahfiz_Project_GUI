@@ -2,20 +2,22 @@ package Classes;
 
 public class Admin {
 
-    private int admin_ID ;// Admin ID must start with '1' and consist of 5 digits
+    private String admin_ID ;// Admin ID must start with '1' and consist of 5 digits
     private String name ;
 	private String pass ;
 	
 	//no default constructor for security purpose
 	
-	public Admin(int admin_ID, String name, String pass) {
+	public Admin(String admin_ID, String name, String pass) {
 		super();
 		this.name = name;
-		if(admin_ID%10000==1){
+		if(checkAdminID(admin_ID)){
 			this.admin_ID = admin_ID;
 		}
 		else {
-			OkAlert.display("Error", "Admin account can't be created check ID");
+            OkAlert.display("Error", "Admin account can't be created check ID");
+            throw new IllegalArgumentException();
+
 		}
 		this.pass = pass;
 	}
@@ -29,11 +31,11 @@ public class Admin {
 		this.name = name;
 	}
 
-	public int getAdmin_ID() {
+	public String getAdmin_ID() {
 		return admin_ID;
 	}
 
-	public void setAdmin_ID(int admin_ID) {
+	public void setAdmin_ID(String admin_ID) {
 		this.admin_ID = admin_ID;
 	}
 
@@ -44,4 +46,9 @@ public class Admin {
 	public void setPass(String pass) {
 		this.pass = pass;
 	}
+
+    public boolean checkAdminID (String id){
+
+        return id.matches("[1]\\d{4}");
+    }
 }
