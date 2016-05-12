@@ -1,6 +1,7 @@
 package Classes;
 
-import java.awt.*;
+import javafx.scene.control.TextField;
+import javafx.scene.control.PasswordField;
 import java.util.ArrayList;
 
 /**
@@ -8,13 +9,22 @@ import java.util.ArrayList;
  */
 public class Validator {
 
-    public boolean AdminID (TextField field, String id){
+    public boolean AdminID (TextField field, String id, ArrayList<Admin> admins) {
 
-        if (id.matches("[1]\\d{4}")){
-            return true;
-        }
-        else{
-            field.setBackground(Color.red);
+        if (id.matches("[1]\\d{4}")) {
+
+            for (int i = 0; i < admins.size(); i++) {
+                if (id.matches(admins.get(i).getAdmin_ID())) {
+                    return true;
+                    break;
+                } else {
+                    field.setStyle("-fx-control-inner-background: #FA5064");
+                    return false;
+                }
+            }
+
+        } else {
+            field.setStyle("-fx-control-inner-background: #FA5064");
             return false;
         }
 
@@ -26,7 +36,7 @@ public class Validator {
             return true;
         }
         else{
-            field.setBackground(Color.red);
+            field.setStyle("-fx-control-inner-background: #FA5064");
             return false;
         }
 
@@ -38,39 +48,51 @@ public class Validator {
             return true;
         }
         else{
-            field.setBackground(Color.red);
+            field.setStyle("-fx-control-inner-background: #FA5064");
             return false;
         }
 
     }
     
-    public boolean adminpass (TextField field, String pass, ArrayList<Admin> admins){
+    public boolean adminpass (PasswordField field, String pass, ArrayList<Admin> admins){
         
         boolean result = false;
         
         for(int i = 0; i < admins.size(); i++){
-          result = pass.matches(admins.get(i).getPass());
-            if(result){break;}
+
+            if(pass.matches(admins.get(i).getPass())){
+                result = true;
+                break;
+            }
             
+        }
+        if (!result){
+            field.setStyle("-fx-control-inner-background: #FA5064");
         }
         return result;
     }
 
 
-    public boolean teacherpass (TextField field, String pass, ArrayList<Teacher> teachers){
+    public boolean teacherpass (PasswordField field, String pass, ArrayList<Teacher> teachers){
 
         boolean result = false;
 
         for(int i = 0; i < teachers.size(); i++){
-          result = pass.matches(teachers.get(i).getPass());
-            if(result){break;}
 
+            if(pass.matches(teachers.get(i).getPass())){
+                result = true;
+                break;
+            }
+
+        }
+        if (!result){
+            field.setStyle("-fx-control-inner-background: #FA5064");
         }
         return result;
     }
 
 
-    public boolean Parentpass (TextField field, String pass, ArrayList<Parent> parents){
+    public boolean Parentpass (PasswordField field, String pass, ArrayList<Parent> parents){
 
         boolean result = false;
 
@@ -83,7 +105,7 @@ public class Validator {
         }
 
         if (!result){
-            field.setBackground(Color.red);
+            field.setStyle("-fx-control-inner-background: #FA5064");
         }
         return result;
     }

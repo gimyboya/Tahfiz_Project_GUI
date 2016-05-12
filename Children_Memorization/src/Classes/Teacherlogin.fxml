@@ -16,7 +16,7 @@
             <TextField promptText="ID Number" />
             <PasswordField promptText="Password" />
             <Button mnemonicParsing="false" text="Login" />
-            <Hyperlink fx:id="goBack" onAction="#goBack" text="Go Back" />
+            <Hyperlink fx:id="goBackT" onAction="#goBack" text="Go Back" />
          </children>
          <padding>
             <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />

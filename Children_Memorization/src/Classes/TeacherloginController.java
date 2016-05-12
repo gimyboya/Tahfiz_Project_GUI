@@ -8,11 +8,11 @@ import javafx.stage.Stage;
  */
 public class TeacherloginController {
 
-    public Hyperlink goBack;
+    public Hyperlink goBackT;
 
 
     public void goBack () {
-        Stage stage = (Stage) goBack.getScene().getWindow();
+        Stage stage = (Stage) goBackT.getScene().getWindow();
         stage.close();
     }
 }

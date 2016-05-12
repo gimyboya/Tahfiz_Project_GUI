@@ -19,18 +19,12 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-    // Array list declaration all the manipulations will be don temporally here
-        ArrayList<Admin> admins = new ArrayList<>();
-        ArrayList<Section> sections = new ArrayList<>();
-        ArrayList<Teacher> teachers = new ArrayList<>();
-        ArrayList<Parent> parents = new ArrayList<>();
-        ArrayList<Child> children = new ArrayList<>();
-        ArrayList<Memorazation> memo = new ArrayList<>();
+
 
         FileHandler fileHandler = new FileHandler();
 
         fileHandler.openAdminFile();
-        fileHandler.readAdmin(admins);
+        fileHandler.readAdmin(Arrays.globaladmins);
         fileHandler.closeFile();
 
 
@@ -40,14 +34,14 @@ public class Main extends Application {
         primaryStage.setScene(new Scene(root, 650, 300));
         primaryStage.show();
 
-        int size = admins.size();
+        int size = Arrays.globaladmins.size();
         System.out.println("the size is " + size);
 
-        for(int i = 0; i < admins.size(); i++){
+        for(int i = 0; i < Arrays.globaladmins.size(); i++){
 
-            String id = admins.get(i).getAdmin_ID();
-            String name = admins.get(i).getName();
-            String pass = admins.get(i).getPass();
+            String id = Arrays.globaladmins.get(i).getAdmin_ID();
+            String name = Arrays.globaladmins.get(i).getName();
+            String pass = Arrays.globaladmins.get(i).getPass();
             System.out.println( id + " " + name + " " + pass );
         }
 

@@ -8,11 +8,12 @@ import javafx.stage.Stage;
  */
 public class ParentloginController {
 
-    public Hyperlink goBack;
+
+    public Hyperlink goBackP;
 
 
     public void goBack () {
-        Stage stage = (Stage) goBack.getScene().getWindow();
+        Stage stage = (Stage) goBackP.getScene().getWindow();
         stage.close();
     }
 }
