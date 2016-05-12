@@ -45,7 +45,7 @@ public class Main extends Application {
 
         for(int i = 0; i < admins.size(); i++){
 
-            int id = admins.get(i).getAdmin_ID();
+            String id = admins.get(i).getAdmin_ID();
             String name = admins.get(i).getName();
             String pass = admins.get(i).getPass();
             System.out.println( id + " " + name + " " + pass );

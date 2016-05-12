@@ -169,7 +169,7 @@ public class FileHandler {
         while(scanner.hasNext()){
 
             try{
-                Admin temp = new Admin(Integer.parseInt(scanner.next()), scanner.next(),scanner.next());
+                Admin temp = new Admin(scanner.next(), scanner.next(),scanner.next());
                 admins.add(temp);
 
 
