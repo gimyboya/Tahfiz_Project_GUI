@@ -5,16 +5,16 @@ import java.util.Date;
 public class Teacher extends Account{
 	
 	private boolean ijaza ;
-	private Section [] classes_in_charge ; 
+	private Section [] classes_in_charge ;
+
 	public Teacher() {
 		super();
 		ijaza= false ;
 		classes_in_charge = null ;
 	}
-	public Teacher(long iD, String pass, String name, String phone, String e_mail, Date dOB, String address,
-			char gender,boolean ijaza) {
-		super(pass, name, phone, e_mail, dOB, address, gender);
-		if(iD % 100000000 == 2)this.ID = iD;
+	public Teacher(int iD, String pass, String name, String phone, String e_mail, String address,boolean ijaza) {
+		super(pass, name, phone, e_mail, address);
+		if(iD % 10000 == 2)this.ID = iD;
 		this.ijaza = ijaza;
 		
 	}
@@ -33,8 +33,8 @@ public class Teacher extends Account{
 	}
 	
 	//overriding
-	public void setID(long iD) {
-		if(iD % 100000000 == 2)super.ID = iD;
+	public void setID(int iD) {
+		if(iD % 10000 == 2)super.ID = iD;
 		}
 	
 	

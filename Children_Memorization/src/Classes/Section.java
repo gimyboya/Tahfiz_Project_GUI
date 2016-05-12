@@ -1,35 +1,44 @@
 package Classes;
-import java.util.Timer;
+
 
 public class Section {
 	private String name ;
-	private int section_number ;
+	private int section_number = 00000 ;
 	private int number_of_student;
 	private int range_age_from;
 	private int range_age_to;
 	private int min_amount_of_hifz;//the amount of new memorization
 	private int min_amount_of_moragah;//the amount revision of memorization
-	private String time ; //time library 
-	private Teacher facilator ; 
-	private Child [] students_in_section ;
+	private int teacherID ;
 	
 	public Section(){
-		name = null ;
-		section_number = 0;
+		name = "noname" ;
+		this.section_number = 0;
 		number_of_student = 0;
 		range_age_from = 0;
 		range_age_to = 0;
 		min_amount_of_hifz = 0;
 		min_amount_of_moragah = 0;
-		time = null ;
-		facilator = null ;
-		students_in_section = null ;
+		teacherID = 0 ;
 		//prombt "you have create an empty section"
 		
 	}
-	
+
+	public Section(String name, int section_number, int range_age_from, int range_age_to,
+				   int min_amount_of_hifz, int min_amount_of_moragah) {
+
+		this.name = name;
+		this.section_number = section_number;
+		this.range_age_from = range_age_from;
+		this.range_age_to = range_age_to;
+		this.min_amount_of_hifz = min_amount_of_hifz;
+		this.min_amount_of_moragah = min_amount_of_moragah;
+
+		OkAlert.display("Note", "you have create" + this.name + "section");
+	}
+
 	public Section(String name, int section_number, int number_of_student, int range_age_from, int range_age_to,
-			int min_amount_of_hifz, int min_amount_of_moragah, String time) {
+			int min_amount_of_hifz, int min_amount_of_moragah) {
 		
 		this.name = name;
 		this.section_number = section_number;
@@ -38,9 +47,8 @@ public class Section {
 		this.range_age_to = range_age_to;
 		this.min_amount_of_hifz = min_amount_of_hifz;
 		this.min_amount_of_moragah = min_amount_of_moragah;
-		this.time = time;
-		
-		//prombt "you have create (section name) section"
+
+		OkAlert.display("Note", "you have create" + this.name + "section");
 	}
 	
 //get/set methods
@@ -100,41 +108,19 @@ public class Section {
 		this.min_amount_of_moragah = min_amount_of_moragah;
 	}
 
-	public String getTime() {
-		return time;
+	public long getteacherID() {
+		return teacherID;
 	}
 
-	public void setTime(String time) {
-		this.time = time;
+	public void setteacherID(int teacherID) {
+		this.teacherID = teacherID;
 	}
 
-	public Teacher getFacilator() {
-		return facilator;
-	}
-
-	public void setFacilator(Teacher facilator) {
-		this.facilator = facilator;
-	}
-
-	public Child[] getStudents_in_section() {
-		return students_in_section;
-	}
-
-	public void setStudents_in_section(Child[] students_in_section) {
-		this.students_in_section = students_in_section;
-	} 
 	
 	//other methods 
-	String add_student(Child new_student){
-		
-		if(new_student.getAge()> range_age_to &&
-				new_student.getAge() < range_age_from)return "age is out of range";
-			if(number_of_student >= 30 )return "the section is full";
-			//the maximum number of students in each section is 30 
-		number_of_student++;
-		students_in_section[students_in_section.length+1]=new_student;
-		return "student is successfully added";	
-		
+	public void add_student(){
+		int temp = getNumber_of_student()+1;
+		setNumber_of_student(temp);
 	}
 	
 	

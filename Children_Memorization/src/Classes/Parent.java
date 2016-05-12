@@ -11,10 +11,9 @@ public class Parent extends Account{
 		relationship = null ;
 		his_children = null ;
 	}
-	public Parent(long iD, String pass, String name, String phone, String e_mail, Date dOB, String address,
-			char gender,String ralationship) {
-		super(pass, name, phone, e_mail, dOB, address, gender);
-		if(iD % 100000000 == 2)super.ID = iD;
+	public Parent(int iD, String pass, String name, String phone, String e_mail, String address,String ralationship) {
+		super(pass, name, phone, e_mail, address);
+		if(iD % 10000 == 3)super.ID = iD;
 		this.relationship = ralationship;
 		
 	}
@@ -33,8 +32,8 @@ public class Parent extends Account{
 	}
 	
 	//overriding 
-	public void setID(long iD) {
-		if(iD % 100000000 == 2)super.ID = iD;
+	public void setID(int iD) {
+		if(iD % 10000 == 3)super.ID = iD;
 		
 		}
 
