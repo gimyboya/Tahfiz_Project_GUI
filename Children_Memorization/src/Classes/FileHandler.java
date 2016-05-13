@@ -19,13 +19,14 @@ public class FileHandler {
                     file = new File("Admin.txt");
 
                     if (file.createNewFile()){
+                        System.out.println("Missing File The File you are trying to open doesn't exist but have been created");
                         System.out.println("File is created!");
-                        OkAlert.display("Missing File", "The File you are trying to open doesn't exist but have been created");
                     }else{
                         System.out.println("Admin file already exists.");
                     }
 
                     scanner = new Scanner(file);
+                    System.out.println();
                 }
                 catch (IOException e){}
     }
@@ -39,7 +40,7 @@ public class FileHandler {
         }
         catch (Exception e){
 
-            OkAlert.display("Missing File", "The File you are trying to open doesn't exist and have been created");
+            System.out.println("Missing File The File you are trying to open doesn't exist and have been created");
         }
     }
 
@@ -48,8 +49,8 @@ public class FileHandler {
             file = new File("Section.txt");
 
             if (file.createNewFile()){
+                System.out.println("Missing File The File you are trying to open doesn't exist but have been created");
                 System.out.println("File is created!");
-                OkAlert.display("Missing File", "The File you are trying to open doesn't exist but have been created");
             }else{
                 System.out.println("Section file already exists.");
             }
@@ -66,7 +67,7 @@ public class FileHandler {
         }
         catch (Exception e){
 
-            OkAlert.display("Missing File", "The File you are trying to open doesn't exist and have been created");
+            System.out.println("Missing File The File you are trying to open doesn't exist and have been created");
         }
     }
 
@@ -75,8 +76,8 @@ public class FileHandler {
             file = new File("Teacher.txt");
 
             if (file.createNewFile()){
+                System.out.println("Missing File The File you are trying to open doesn't exist but have been created");
                 System.out.println("File is created!");
-                OkAlert.display("Missing File", "The File you are trying to open doesn't exist but have been created");
             }else{
                 System.out.println("Teacher file already exists.");
             }
@@ -93,7 +94,7 @@ public class FileHandler {
         }
         catch (Exception e){
 
-            OkAlert.display("Missing File", "The File you are trying to open doesn't exist and have been created");
+            System.out.println("Missing File The File you are trying to open doesn't exist and have been created");
         }
     }
 
@@ -102,8 +103,8 @@ public class FileHandler {
             file = new File("Parent.txt");
 
             if (file.createNewFile()){
+                System.out.println("Missing File The File you are trying to open doesn't exist but have been created");
                 System.out.println("File is created!");
-                OkAlert.display("Missing File", "The File you are trying to open doesn't exist but have been created");
             }else{
                 System.out.println("Parent file already exists.");
             }
@@ -120,7 +121,7 @@ public class FileHandler {
         }
         catch (Exception e){
 
-            OkAlert.display("Missing File", "The File you are trying to open doesn't exist and have been created");
+            System.out.println("Missing File The File you are trying to open doesn't exist and have been created");
         }
     }
 
@@ -129,8 +130,8 @@ public class FileHandler {
             file = new File("Child.txt");
 
             if (file.createNewFile()){
+                System.out.println("Missing File The File you are trying to open doesn't exist but have been created");
                 System.out.println("File is created!");
-                OkAlert.display("Missing File", "The File you are trying to open doesn't exist but have been created");
             }else{
                 System.out.println("Child file already exists.");
             }
@@ -147,7 +148,7 @@ public class FileHandler {
         }
         catch (Exception e){
 
-            OkAlert.display("Missing File", "The File you are trying to open doesn't exist and have been created");
+            System.out.println("Missing File The File you are trying to open doesn't exist and have been created");
         }
     }
 
@@ -156,8 +157,8 @@ public class FileHandler {
             file = new File("Memorization.txt");
 
             if (file.createNewFile()){
+                System.out.println("Missing File The File you are trying to open doesn't exist but have been created");
                 System.out.println("File is created!");
-                OkAlert.display("Missing File", "The File you are trying to open doesn't exist but have been created");
             }else{
                 System.out.println("Memorization file already exists.");
             }
@@ -174,7 +175,7 @@ public class FileHandler {
         }
         catch (Exception e){
 
-            OkAlert.display("Missing File", "The File you are trying to open doesn't exist and have been created");
+            System.out.println("Missing File The File you are trying to open doesn't exist and have been created");
         }
     }
 
