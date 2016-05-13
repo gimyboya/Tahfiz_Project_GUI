@@ -35,6 +35,8 @@ public class TeacherloginController {
             validator.teacherpass(pass, pass.getText(), Arrays.globalteachers, Validator.throwTeacherIndex(teacherID.getText(),Arrays.globalteachers));
         }
         if((validator.TeacherID(teacherID,teacherID.getText(), Arrays.globalteachers)) && (validator.teacherpass(pass, pass.getText(), Arrays.globalteachers, Validator.throwTeacherIndex(teacherID.getText(),Arrays.globalteachers)))){
+
+            Validator.userIndex = Validator.throwTeacherIndex(teacherID.getText(),Arrays.globalteachers);
             WelcomeController.teacherloginStage.close();
 
             try{

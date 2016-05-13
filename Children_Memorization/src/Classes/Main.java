@@ -48,8 +48,6 @@ public class Main extends Application {
 
 
 
-
-
         Parent root = FXMLLoader.load(getClass().getResource("Welcome.fxml"));
         primaryStage.setTitle("Welcome");
         primaryStage.setScene(new Scene(root, 650, 300));

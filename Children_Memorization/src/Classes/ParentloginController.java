@@ -24,6 +24,7 @@ public class ParentloginController {
 
 
 
+
     public void goBack () {
         Stage stage = (Stage) goBackP.getScene().getWindow();
         stage.close();
@@ -37,6 +38,9 @@ public class ParentloginController {
             validator.parentpass(pass, pass.getText(), Arrays.globalparents, Validator.throwParentIndex(parentID.getText(),Arrays.globalparents));
         }
         if((validator.ParentID(parentID,parentID.getText(), Arrays.globalparents)) && (validator.parentpass(pass, pass.getText(), Arrays.globalparents, Validator.throwParentIndex(parentID.getText(),Arrays.globalparents)))){
+
+           //if the login is succesful store the index of the user
+            Validator.userIndex = Validator.throwParentIndex(parentID.getText(),Arrays.globalparents);
             WelcomeController.parentloginStage.close();
 
             try{

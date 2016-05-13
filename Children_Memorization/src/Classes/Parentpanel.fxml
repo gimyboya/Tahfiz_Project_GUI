@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.TableColumn?>
@@ -17,11 +18,7 @@
     </MenuBar>
       <HBox alignment="CENTER" VBox.vgrow="ALWAYS">
          <children>
-            <TableView HBox.hgrow="ALWAYS">
-              <columns>
-                <TableColumn minWidth="250.0" prefWidth="250.0" text="Children" />
-              </columns>
-            </TableView>
+            <ListView fx:id="listView" prefHeight="200.0" prefWidth="200.0" />
             <TableView prefHeight="229.0" prefWidth="403.0" HBox.hgrow="ALWAYS">
               <columns>
                 <TableColumn prefWidth="75.0" text="Soura" />

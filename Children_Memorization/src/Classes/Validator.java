@@ -10,6 +10,8 @@ import java.util.ArrayList;
 public class Validator {
 
     
+    public static int userIndex;
+
 
     public boolean AdminID (TextField field, String id, ArrayList<Admin> admins) {
 
