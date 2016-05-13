@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="67420d74-8dc4-4d0b-a9d6-8d28d13c3dda" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Classes/Main.java" afterPath="$PROJECT_DIR$/src/Classes/Main.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Classes/Validator.java" afterPath="$PROJECT_DIR$/src/Classes/Validator.java" />
     </list>
     <ignored path="Children_Memorization.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,7 +25,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Classes/Main.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="51">
@@ -43,6 +43,16 @@
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Validator.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Classes/Validator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-351">
+              <caret line="108" column="13" selection-start-line="108" selection-start-column="13" selection-end-line="108" selection-end-column="13" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -90,6 +100,7 @@
         <option value="$PROJECT_DIR$/src/Classes/OkAlert.java" />
         <option value="$PROJECT_DIR$/src/Classes/FileHandler.java" />
         <option value="$PROJECT_DIR$/src/Classes/Main.java" />
+        <option value="$PROJECT_DIR$/src/Classes/Validator.java" />
       </list>
     </option>
   </component>
@@ -639,12 +650,12 @@
       <updated>1462920741162</updated>
       <workItem from="1462920755050" duration="8897000" />
       <workItem from="1462943607016" duration="20569000" />
-      <workItem from="1463128573757" duration="705000" />
+      <workItem from="1463128573757" duration="966000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="705000" />
+    <option name="totallyTimeSpent" value="966000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -697,14 +708,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_72/src.zip!/java/lang/Thread.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="11679">
-          <caret line="744" column="0" selection-start-line="744" selection-start-column="0" selection-end-line="744" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Classes/FileHandler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1040,6 +1043,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Classes/Validator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-351">
+          <caret line="108" column="13" selection-start-line="108" selection-start-column="13" selection-end-line="108" selection-end-column="13" />
           <folding />
         </state>
       </provider>

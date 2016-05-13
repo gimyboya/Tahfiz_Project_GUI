@@ -1,7 +1,5 @@
 package Classes;
 
-import javafx.scene.control.TextField;
-import javafx.scene.control.PasswordField;
 import java.util.ArrayList;
 
 /**
@@ -13,9 +11,8 @@ public class Validator {
     public static int userIndex;
 
 
-    public boolean AdminID (TextField field, String id, ArrayList<Admin> admins) {
+    public boolean AdminID (String id, ArrayList<Admin> admins) {
 
-        field.setStyle("-fx-control-inner-background: #FFFFFF");
         boolean result = false;
 
         if (id.matches("[1]\\d{4}")) {
@@ -27,16 +24,14 @@ public class Validator {
             }
             return result;
         } else {
-            field.setStyle("-fx-control-inner-background: #FA5064");
             return false;
         }
 
     }
 
 
-    public boolean TeacherID (TextField field, String id, ArrayList<Teacher> teachers){
+    public boolean TeacherID ( String id, ArrayList<Teacher> teachers){
 
-        field.setStyle("-fx-control-inner-background: #FFFFFF");
         boolean result = false;
 
         if (id.matches("[2]\\d{4}")) {
@@ -48,15 +43,13 @@ public class Validator {
             }
             return result;
         } else {
-            field.setStyle("-fx-control-inner-background: #FA5064");
             return false;
         }
 
     }
 
-    public boolean ParentID (TextField field, String id, ArrayList<Parent> parents){
+    public boolean ParentID (String id, ArrayList<Parent> parents){
 
-        field.setStyle("-fx-control-inner-background: #FFFFFF");
         boolean result = false;
 
         if (id.matches("[3]\\d{4}")) {
@@ -68,15 +61,13 @@ public class Validator {
             }
             return result;
         } else {
-            field.setStyle("-fx-control-inner-background: #FA5064");
             return false;
         }
 
     }
     
-    public boolean adminpass (PasswordField field, String pass, ArrayList<Admin> admins, int index){
+    public boolean adminpass ( String pass, ArrayList<Admin> admins, int index){
 
-        field.setStyle("-fx-control-inner-background: #FFFFFF");
         boolean result = false;
 
 
@@ -84,7 +75,6 @@ public class Validator {
                 result = true;
             }
             else{
-                field.setStyle("-fx-control-inner-background: #FA5064");
                 result = false;
             }
 
@@ -92,9 +82,8 @@ public class Validator {
     }
 
 
-    public boolean teacherpass (PasswordField field, String pass, ArrayList<Teacher> teachers, int index){
+    public boolean teacherpass (String pass, ArrayList<Teacher> teachers, int index){
 
-        field.setStyle("-fx-control-inner-background: #FFFFFF");
         boolean result = false;
 
 
@@ -102,7 +91,6 @@ public class Validator {
             result = true;
         }
         else{
-            field.setStyle("-fx-control-inner-background: #FA5064");
             result = false;
         }
 
@@ -110,9 +98,8 @@ public class Validator {
     }
 
 
-    public boolean parentpass (PasswordField field, String pass, ArrayList<Parent> parents, int index){
+    public boolean parentpass (String pass, ArrayList<Parent> parents, int index){
 
-        field.setStyle("-fx-control-inner-background: #FFFFFF");
         boolean result = false;
 
 
@@ -120,7 +107,6 @@ public class Validator {
             result = true;
         }
         else{
-            field.setStyle("-fx-control-inner-background: #FA5064");
             result = false;
         }
 
