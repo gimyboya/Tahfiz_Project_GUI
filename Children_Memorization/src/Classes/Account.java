@@ -6,11 +6,11 @@ public class Account {
 
 
 	protected String ID ;// Admin ID must start with '2' for teacher or '3' for parent , and consist of 5 digits
-	private String pass; 
-	private String name ;
-	private String phone ;
-	private String e_mail;
-	private String address;
+    private String pass;
+    private String name ;
+    private String phone ;
+    private String e_mail;
+    private String address;
 	
 	public Account() {
 		ID = null;

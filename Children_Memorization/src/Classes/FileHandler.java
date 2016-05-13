@@ -15,25 +15,22 @@ public class FileHandler {
     private File file;
 
     public void openAdminFile (){ // to open a file for reading
-        try{
-            file = new File("Admin.txt");
+                try{
+                    file = new File("Admin.txt");
 
-            if (file.createNewFile()){
-                System.out.println("File is created!");
-                OkAlert.display("Missing File", "The File you are trying to open doesn't exist but have been created");
-            }else{
-                System.out.println("Admin file already exists.");
-            }
+                    if (file.createNewFile()){
+                        System.out.println("File is created!");
+                        OkAlert.display("Missing File", "The File you are trying to open doesn't exist but have been created");
+                    }else{
+                        System.out.println("Admin file already exists.");
+                    }
 
-            scanner = new Scanner(file);
-        }
-        catch (IOException e){
-
-
-
-
-        }
+                    scanner = new Scanner(file);
+                }
+                catch (IOException e){}
     }
+
+
 
     public void openAdminFormatter (){ // to open a file for writing
 
@@ -48,14 +45,18 @@ public class FileHandler {
 
     public void openSectionFile (){
         try{
-            file = new File("Sections.txt");
+            file = new File("Section.txt");
+
+            if (file.createNewFile()){
+                System.out.println("File is created!");
+                OkAlert.display("Missing File", "The File you are trying to open doesn't exist but have been created");
+            }else{
+                System.out.println("Section file already exists.");
+            }
+
             scanner = new Scanner(file);
         }
-        catch (Exception e){
-
-            OkAlert.display("Missing File", "The File you are trying to open doesn't exist and have been created");
-
-        }
+        catch (IOException e){}
     }
 
     public void openSectionFormatter (){
@@ -71,14 +72,18 @@ public class FileHandler {
 
     public void openTeacherFile (){
         try{
-            file = new File("Teachers.txt");
+            file = new File("Teacher.txt");
+
+            if (file.createNewFile()){
+                System.out.println("File is created!");
+                OkAlert.display("Missing File", "The File you are trying to open doesn't exist but have been created");
+            }else{
+                System.out.println("Teacher file already exists.");
+            }
+
             scanner = new Scanner(file);
         }
-        catch (Exception e){
-
-            OkAlert.display("Missing File", "The File you are trying to open doesn't exist and have been created");
-
-        }
+        catch (IOException e){}
     }
 
     public void openTeacherFormatter (){
@@ -94,14 +99,18 @@ public class FileHandler {
 
     public void openParentFile (){
         try{
-            file = new File("Parents.txt");
+            file = new File("Parent.txt");
+
+            if (file.createNewFile()){
+                System.out.println("File is created!");
+                OkAlert.display("Missing File", "The File you are trying to open doesn't exist but have been created");
+            }else{
+                System.out.println("Parent file already exists.");
+            }
+
             scanner = new Scanner(file);
         }
-        catch (Exception e){
-
-            OkAlert.display("Missing File", "The File you are trying to open doesn't exist and have been created");
-
-        }
+        catch (IOException e){}
     }
 
     public void openParentFormatter (){
@@ -117,14 +126,18 @@ public class FileHandler {
 
     public void openChildrenFile (){
         try{
-            file = new File("Children.txt");
+            file = new File("Child.txt");
+
+            if (file.createNewFile()){
+                System.out.println("File is created!");
+                OkAlert.display("Missing File", "The File you are trying to open doesn't exist but have been created");
+            }else{
+                System.out.println("Child file already exists.");
+            }
+
             scanner = new Scanner(file);
         }
-        catch (Exception e){
-
-            OkAlert.display("Missing File", "The File you are trying to open doesn't exist and have been created");
-
-        }
+        catch (IOException e){}
     }
 
     public void openChildrenFormatter (){
@@ -141,13 +154,17 @@ public class FileHandler {
     public void openMemorizationFile (){
         try{
             file = new File("Memorization.txt");
+
+            if (file.createNewFile()){
+                System.out.println("File is created!");
+                OkAlert.display("Missing File", "The File you are trying to open doesn't exist but have been created");
+            }else{
+                System.out.println("Memorization file already exists.");
+            }
+
             scanner = new Scanner(file);
         }
-        catch (Exception e){
-
-            OkAlert.display("Missing File", "The File you are trying to open doesn't exist and have been created");
-
-        }
+        catch (IOException e){}
     }
 
     public void openMemorizationFormatter (){
@@ -165,7 +182,6 @@ public class FileHandler {
 
     public void readAdmin (ArrayList<Admin> admins){
 
-        int counter = 0;
         while(scanner.hasNext()){
 
             try{
@@ -174,14 +190,108 @@ public class FileHandler {
 
 
             }
-            catch (IndexOutOfBoundsException e){
+            catch (Exception e){
 
             }
-            System.out.println("Iteration " + counter);
-            counter++;
+
         }
 
     }
+
+    public void readSection (ArrayList<Section> sections){
+
+        while(scanner.hasNext()){
+
+            try{
+                Section temp = new Section(scanner.next(), scanner.nextInt(), scanner.nextInt(), scanner.nextInt(), scanner.nextInt(), scanner.nextInt(), scanner.nextInt(), scanner.nextInt());
+                sections.add(temp);
+
+
+            }
+            catch (IndexOutOfBoundsException e){
+
+            }
+
+        }
+
+    }
+
+    public void readTeacher (ArrayList<Teacher> teachers){
+
+        while(scanner.hasNext()){
+
+            try{
+
+                Teacher temp = new Teacher(scanner.next(), scanner.next(), scanner.next(), scanner.next(), scanner.next(), scanner.next(),scanner.nextBoolean(), scanner.nextInt());
+                teachers.add(temp);
+
+
+            }
+            catch (Exception e){
+
+                System.out.println(e.getMessage());
+
+            }
+
+        }
+
+    }
+
+    public void readParent (ArrayList<Parent> parents){
+
+        while(scanner.hasNext()){
+
+            try{
+                Parent temp = new Parent(scanner.next(), scanner.next(), scanner.next(), scanner.next(), scanner.next(), scanner.next(), scanner.next(), scanner.next());
+                parents.add(temp);
+
+
+            }
+            catch (Exception e){
+
+            }
+
+        }
+
+    }
+
+    public void readChild (ArrayList<Child> children){
+
+        while(scanner.hasNext()){
+
+            try{
+                Child temp = new Child(scanner.next(), scanner.next(), scanner.nextInt(), scanner.next(), scanner.nextFloat(), scanner.next());
+                children.add(temp);
+
+
+            }
+            catch (Exception e){
+
+            }
+
+        }
+
+    }
+
+    public void readMemorization (ArrayList<Memorazation> memorazations){
+
+        while(scanner.hasNext()){
+
+            try{
+                Memorazation temp = new Memorazation( scanner.nextLine(), scanner.nextInt(), scanner.nextInt(), scanner.nextLine());
+                memorazations.add(temp);
+
+
+            }
+            catch (IndexOutOfBoundsException e){
+
+            }
+
+        }
+
+    }
+
+
 
     public void addAdmin (Admin admin) throws NullPointerException{
 

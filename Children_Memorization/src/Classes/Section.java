@@ -24,8 +24,7 @@ public class Section {
 		
 	}
 
-	public Section(String name, int section_number, int range_age_from, int range_age_to,
-				   int min_amount_of_hifz, int min_amount_of_moragah) {
+	public Section(String name, int section_number, int number_of_student, int range_age_from, int range_age_to, int min_amount_of_hifz, int min_amount_of_moragah, int teacherID) {
 
 		this.name = name;
 		this.section_number = section_number;
@@ -33,8 +32,9 @@ public class Section {
 		this.range_age_to = range_age_to;
 		this.min_amount_of_hifz = min_amount_of_hifz;
 		this.min_amount_of_moragah = min_amount_of_moragah;
+		this.teacherID = teacherID;
 
-		OkAlert.display("Note", "you have create" + this.name + "section");
+		OkAlert.display("Note", "you have create " + this.name + " section");
 	}
 
 	public Section(String name, int section_number, int number_of_student, int range_age_from, int range_age_to,
@@ -48,7 +48,7 @@ public class Section {
 		this.min_amount_of_hifz = min_amount_of_hifz;
 		this.min_amount_of_moragah = min_amount_of_moragah;
 
-		OkAlert.display("Note", "you have create" + this.name + "section");
+		OkAlert.display("Note", "you have create " + this.name + " section");
 	}
 	
 //get/set methods
@@ -117,7 +117,7 @@ public class Section {
 	}
 
 	
-	//other methods 
+	//other methods
 	public void add_student(){
 		int temp = getNumber_of_student()+1;
 		setNumber_of_student(temp);

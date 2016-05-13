@@ -11,7 +11,6 @@ public class Memorazation {
     private int from;
     private int to;
     private String evaluation;
-    private Date date;
 
     public Memorazation(){
         this.soura = "";
@@ -43,10 +42,6 @@ public class Memorazation {
         return evaluation;
     }
 
-    public Date getDate() {
-        return date;
-    }
-
     public void setSoura(String soura) {
         this.soura = soura;
     }
@@ -63,7 +58,4 @@ public class Memorazation {
         this.evaluation = evaluation;
     }
 
-    public void setDate(Date date) {
-        this.date = date;
-    }
 }

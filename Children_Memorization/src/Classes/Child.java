@@ -1,48 +1,69 @@
 package Classes;
 
+import java.util.ArrayList;
+
+import static Classes.Parent.checkParentID;
+
 public class Child {
 	
-	private long student_ID; //student ID must start with '4' and consist of 9 digits
+	private String student_ID; //student ID must start with '4' and consist of 9 digits
 	private String name ;
 	private int age ;
-	private Parent first_parent ;
-	private Parent second_parent ;
-	private String [] alternative_parents; //array of alternative parents' names in case that the main parents are not available 
 	private String phone ;
-	private float amount_of_hifz; //the totsl amount of memorization which counted with pages 
+	private float amount_of_hifz; //the totsl amount of memorization which counted with pages
+	private String parentID;
 	
 	public Child(){
-		student_ID = 0;
+        student_ID = "";
 		name = null;
 		age = 0;
-		first_parent = null ;
-		second_parent = null;
-		alternative_parents = null;
 		phone = null;
 		amount_of_hifz = 0; 
 		//prombt "you have create an empty Child"
 	}
 	
-	public Child(long student_ID, String name, int age, String[] alternative_parents, String phone, float amount_of_hifz) {
-		
-		if(student_ID%100000000==4)this.student_ID = student_ID;
-		this.name = name;
+	public Child(String student_ID, String name, int age, String phone, float amount_of_hifz, String  parentID) {
+
+        if(checkchildID(student_ID)){
+            this.student_ID = student_ID;
+        }
+        else {
+            OkAlert.display("Error", "child account can't be created check ID");
+            throw new IllegalArgumentException();
+
+        }
+        this.name = name;
 		this.age = age;
-		this.alternative_parents = alternative_parents;
 		this.phone = phone;
 		this.amount_of_hifz = amount_of_hifz;
+        if(checkParentID(parentID)){
+            this.parentID = parentID;
+        }
+        else {
+            OkAlert.display("Error", "child account can't be created check ID");
+            throw new IllegalArgumentException();
+
+        }
+
 		//prombt "you have create a (child's name ) child"
 		
 	}
 	
 	// get/set methods
 
-	public long getStudent_ID() {
+	public String getStudent_ID() {
 		return student_ID;
 	}
 
-	public void setStudent_ID(long student_ID) {
-		if(student_ID%100000000==4)this.student_ID = student_ID;
+	public void setStudent_ID(String student_ID) {
+        if(checkchildID(student_ID)){
+            this.student_ID = student_ID;
+        }
+        else {
+            OkAlert.display("Error", "child account can't be created check ID");
+            throw new IllegalArgumentException();
+
+        }
 	}
 
 	public String getName() {
@@ -61,30 +82,6 @@ public class Child {
 		this.age = age;
 	}
 
-	public Parent getFirst_parent() {
-		return first_parent;
-	}
-
-	public void setFirst_parent(Parent first_parent) {
-		this.first_parent = first_parent;
-	}
-
-	public Parent getSecond_parent() {
-		return second_parent;
-	}
-
-	public void setSecond_parent(Parent second_parent) {
-		this.second_parent = second_parent;
-	}
-
-	public String[] getAlternative_parents() {
-		return alternative_parents;
-	}
-
-	public void setAlternative_parents(String[] alternative_parents) {
-		this.alternative_parents = alternative_parents;
-	}
-
 	public String getPhone() {
 		return phone;
 	}
@@ -100,8 +97,15 @@ public class Child {
 	public void setAmount_of_hifz(float amount_of_hifz) {
 		this.amount_of_hifz = amount_of_hifz;
 	}
-	
-	//other methods 
+
+    public String getParentID() {
+        return parentID;
+    }
+
+    public void setParentID(String parentID) {
+        this.parentID = parentID;
+    }
+    //other methods
 	
 	void add_pages(float pages){
 		//Round the pages to just one or half page
@@ -111,8 +115,14 @@ public class Child {
 	void add_pages(int pages){
 		amount_of_hifz+=pages;
 	}
-	
-	
-	
+
+    public boolean checkchildID (String id){
+
+        return id.matches("[4]\\d{4}");
+    }
+
+
+
+
 
 }
