@@ -2,26 +2,11 @@ package Classes;/**
  * Created by gimy on 11/05/2016.
  */
 
-import java.io.File;
-import java.util.ArrayList;
 
-import javafx.application.Application;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.stage.Stage;
 
-public class Main extends Application {
+public class Main  {
 
     public static void main(String[] args) {
-        launch(args);
-    }
-
-    @Override
-    public void start(Stage primaryStage) throws Exception{
-
-        Stages.Window = primaryStage;
-
         FileHandler fileHandler = new FileHandler();
 
         fileHandler.openAdminFile();
@@ -45,14 +30,11 @@ public class Main extends Application {
         fileHandler.readChild(Arrays.globalchildren);
         fileHandler.closeFile();
 
-
-
-
-        Parent root = FXMLLoader.load(getClass().getResource("Welcome.fxml"));
-        primaryStage.setTitle("Welcome");
-        primaryStage.setScene(new Scene(root, 650, 300));
-        primaryStage.show();
-
+        System.out.println(Arrays.globaladmins.size());
+        System.out.println(Arrays.globalteachers.size());
+        System.out.println(Arrays.globalsections.size());
+        System.out.println(Arrays.globalchildren.size());
+        System.out.println(Arrays.globalparents.size());
 
         for(int i = 0; i < Arrays.globaladmins.size(); i++){
 
@@ -62,11 +44,7 @@ public class Main extends Application {
             System.out.println( id + " " + name + " " + pass );
         }
 
-        System.out.println(Arrays.globaladmins.size());
-        System.out.println(Arrays.globalteachers.size());
-        System.out.println(Arrays.globalsections.size());
-        System.out.println(Arrays.globalchildren.size());
-        System.out.println(Arrays.globalparents.size());
+
 
         for(int i = 0; i < Arrays.globalteachers.size(); i++){
 
@@ -82,9 +60,9 @@ public class Main extends Application {
         }
 
 
-
-
     }
+
+
 
 
 }
