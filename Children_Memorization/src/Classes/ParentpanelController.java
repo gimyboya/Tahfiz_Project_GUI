@@ -5,6 +5,7 @@ import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
+import javafx.scene.control.Menu;
 
 import java.util.ArrayList;
 
@@ -18,7 +19,7 @@ public class ParentpanelController {
 
     @FXML
     private ListView<String> listView;
-
+    public Menu logout;
 
     //Loading children
     /*public static ObservableList<Child> getchild (){
