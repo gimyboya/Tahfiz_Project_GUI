@@ -2,24 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="67420d74-8dc4-4d0b-a9d6-8d28d13c3dda" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Classes/Adminlogin.fxml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Classes/AdminloginController.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Classes/Adminpanel.fxml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Classes/AdminpanelController.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Classes/OkAlert.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Classes/Parentlogin.fxml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Classes/ParentloginController.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Classes/Parentpanel.fxml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Classes/ParentpanelController.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Classes/Stages.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Classes/Teacherlogin.fxml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Classes/TeacherloginController.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Classes/Teacherpanel.fxml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Classes/TeacherpanelController.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Classes/Welcome.fxml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Classes/WelcomeController.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Classes/mac_os.css" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Images/Parent.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Images/Teacher.png" afterPath="" />
     </list>
     <ignored path="Children_Memorization.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -164,20 +148,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Children_Memorization" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Children_Memorization" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Children_Memorization" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -672,16 +642,16 @@
       <updated>1462920741162</updated>
       <workItem from="1462920755050" duration="8897000" />
       <workItem from="1462943607016" duration="20569000" />
-      <workItem from="1463128573757" duration="122000" />
+      <workItem from="1463128573757" duration="220000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="122000" />
+    <option name="totallyTimeSpent" value="220000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -693,7 +663,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
